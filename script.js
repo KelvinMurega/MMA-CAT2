@@ -1,5 +1,4 @@
 const video = document.getElementById("wildlifeVideo");
-
 const button = document.getElementById("toggleButton");
 
 button.addEventListener("click", () => {
@@ -7,20 +6,16 @@ button.addEventListener("click", () => {
     if (video.style.display === "none") {
 
         video.style.display = "block";
-
         video.play();
 
-    }
+        button.textContent = "🌿 Hide Video";
 
-    else {
+    } else {
 
-        if (video.paused) {
-
-            video.play();
-
-        }
-
+        video.pause();
         video.style.display = "none";
+
+        button.textContent = "▶ Show & Play Video";
 
     }
 
